@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  background-image: url("/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  color: #321106;
+  font-family: "Nunito", sans-serif;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+}
+.info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loading,
+.scoreboard,
+.description {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pokemon-card {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 20px;
+  border: 2px solid #317dd4;
+  background-color: #e4fcffb8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 20px rgba(25, 2, 107, 0.2);
+}
+
+.image-container {
+  width: 90%;
+  height: 90%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+dialog {
+  padding: 30px 50px;
+  border-radius: 20px;
+  background-color: #edfbfc;
+  border: 1px solid #093b3f84;
+}
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dialog-score {
+  font-size: 1.2rem;
+}
+dialog .image-container {
+  max-width: 100px;
+}
+.dialog-container button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #093b3f;
+  color: rgb(255, 250, 250);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+.dialog-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(9, 59, 63, 0.4);
+  background-color: #0d4f53;
+}
+.dialog-container button:active {
+  transform: scale(0.98);
+}
